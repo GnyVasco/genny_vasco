@@ -1,0 +1,800 @@
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  background: #ffffff;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  gap: 80px;
+  margin: 0 auto;
+}
+
+/* Section 0: Menu Bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 40px 120px 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  /*border: 0.5px solid #000000; */
+  padding: 4px 8px;
+  font-family: 'Sankofa Display', serif;
+  font-size: 32px;
+  letter-spacing: 0.04em;
+  color: #000000;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 16px;
+}
+
+.nav-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: rgba(0, 0, 0, 0.64);
+  text-decoration: none;
+}
+
+.nav-item.active {
+  font-weight: 700;
+  color: #000000;
+}
+
+/* Section 1: Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 120px;
+  gap: 16px;
+  max-width: 1360px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Hero Text */
+.hero-text {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 800;
+  color: #252323;
+  max-width: 1120px;
+  align-items: center;
+}
+
+.waving-hand  {
+  width: 48px;
+  height: 48px;
+}
+
+.hero-text h1 {
+  font-size: 48px;
+  line-height: 1.6;
+}
+
+.hero-text .highlight {
+  color: #A90FB7;
+  font-weight: 600;
+}
+
+.hero-components {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Location Details */
+.hero-text .hero-location {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 18px;
+  font-weight: 400;
+}
+
+/* Location Icon */
+.hero-location-icon {
+  width: 24px;
+  height: 24px;
+  background: #252323;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-location img {
+  width: 18px;
+  height: 18px;
+  fill: #612321;
+}
+
+/* Location Text */
+.hero-location {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.hero-buttons button {
+  padding: 12px 24px;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.secondary-button {
+  font-weight: 500;
+  background: #F4E8F6;                    /* soft purple/white background */
+  color: #252323;                         /* purple text */
+  border: 2px solid #252323;              /* purple border */
+  transition: background 0.2s, color 0.2s, border 0.2s;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.terciary-button {
+  font-weight: 500;
+  color: #252323; 
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  background: transparent;
+  padding: 8px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+/* Section 2: Projects */
+
+.section-projects {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 120px;
+  gap: 16px;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+/* Title */
+.section-projects h3 {
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+  text-align: start;
+}
+
+/* Work Grid */
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 3 columns */
+  gap: 64px; /* space between items */
+  width: 100%;
+}
+
+/* Project Card */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  width: 460px;
+  max-width: 100%;
+}
+
+/* Card Image */
+.project-card .card-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 16px;
+  gap: 10px;
+  width: 100%;
+  height: 460px;
+  background: url(Cover.jpg) center/cover no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  position: relative;
+}
+
+/* Project Tags */
+.project-tags {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+/* Tag Styles */
+.project-tag-primary,
+.project-tag-secondary {
+  display: flex;
+  align-items: center;
+  padding: 4px 16px;
+  gap: 20px;
+  border-radius: 12px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  line-height: 160%;
+  text-align: center;
+}
+
+.project-tag-primary {
+  background: rgba(0, 0, 0, 0.68);
+  color: #ffffff;
+}
+
+.project-tag-secondary {
+  background: #ffffff;
+  color: rgba(0, 0, 0, 0.68);
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid rgba(0, 0, 0, 0.35);
+}
+
+/* About Text Container */
+.about-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /*padding: 0 16px;*/
+  gap: 12px;
+  width: 100%;
+}
+
+/* Title Inside Card */
+.about-text h4 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #252323;
+}
+
+/* Subtitle/Description */
+.about-text p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.about-text span {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+/* Section 3: Collaboration Quick Actions */
+.section-collaboration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.section-collaboration h2 {
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+  text-align: start;
+  padding: 20px 120px 20px;
+}
+
+.collaboration-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  width: 100%;
+}
+
+.collaboration-card {
+  box-sizing: border-box;
+  width: 352px;
+  padding: 24px;
+  border: 2px solid #B47AEA;
+  border-radius: 16px;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.collaboration-card p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.collaboration-card img {
+  text-align: end
+}
+.collaboration-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 120px 20px;
+  text-align: center;
+}
+
+.collaboration-banner p {
+  padding: 48px 0 48px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 16px;
+  width: 100%;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 550;
+  font-size: 32px;
+  line-height: 160%;
+  padding: 48px;
+  color: #FFF7FF;
+  text-decoration: none;
+}
+
+.collaboration-banner a {
+  color: #A90FB7;
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  background: #FFFFFF;
+  align-items: stretch;
+  padding: 40px 120px 16px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  width: 100%;
+}
+
+.footer-logo {
+  height: auto;
+  max-height: 40px;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.social-links a {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.68);
+  text-decoration: none;
+}
+
+/* Remove default margin, padding or line height causing space below */
+.social-links a {
+  height: auto;
+  margin: 0;
+  padding: 4px 8px;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 48px;
+}
+
+.footer-bottom p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.55);
+}
+
+/*ABOUT ME*/
+
+/*Bio Section*/
+.about-section {
+  padding: 0 16px;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: min(64px, max(16px, 5vw));
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.about-text {
+  flex: 1 1 360px;
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.about-text h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  color: #252323;
+}
+
+.about-text p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.about-text .highlight {
+  color: #A90FB7;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 160%;
+}
+
+.about-image {
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  display: block;
+}
+
+/*Elevator Pitch*/
+.pitch-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0 120px 16px;
+  gap: 48px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.pitch-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.pitch-highlight {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.pitch-description {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+/*Process*/
+.process-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  gap: 40px;
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.process-images {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  width: 450px;
+}
+
+.talks-1,
+.talks-2 {
+  width: 100%;
+  border-radius: 12px;
+  background-size: cover;
+  background-position: center;
+}
+
+.talks-1 {
+  height: 280px;
+  background-image: url('assets/images/gdsc-talk.jpg');
+}
+
+.talks-2 {
+  height: 260px;
+  border-radius: 15px;
+  background-image: url('assets/images/devfest-talk.jpg');
+}
+
+.process-description {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 40px;
+  max-width: 630px;
+}
+
+.process-description h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.process-description p {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.testimonials-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  padding: 0 16px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.testimonials-section h2 {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  color: #252323;
+}
+
+.testimonials-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+
+.testimonial {
+  flex: 1 1 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  max-width: 341px;
+}
+
+.testimonial-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.testimonial-header img {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.testimonial-info .name {
+  font-weight: 500;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.testimonial-info .role {
+  font-weight: 400;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.58);
+}
+
+.testimonial-body {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.testimonial-body span {
+  font-size: 48px;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.38);
+}
+
+.testimonial-body p {
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+  flex: 1;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-menu {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .nav-item {
+    font-size: 18px;
+  }
+
+  .hero {
+    padding: 0 24px;
+    gap: 12px;
+  }
+
+  .hero-text {
+    font-size: 32px;
+  }
+
+  .hero-location-text {
+    font-size: 18px;
+  }
+
+  .hero-location-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .projects-grid {
+    justify-content: center;
+  }
+
+  .project-card {
+    width: 100%;
+    max-width: 520px;
+  }
+
+  .section-projects {
+    padding: 0 24px;
+  }
+
+  .projects-grid {
+    gap: 32px;
+  }
+
+  .collaboration-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .collaboration-card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .collaboration-banner p {
+    font-size: 24px;
+  }
+
+   .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-bottom {
+    align-items: center;
+    text-align: center;
+  }
+
+  /*ABOUT ME*/
+  .about-content {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-text p {
+    font-size: 28px;
+  }
+
+  .process-section {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .process-images {
+    width: 100%;
+  }
+
+  .process-description {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .testimonials-carousel {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .about-highlight {
+    font-size: 24px;
+    line-height: 36px;
+  }
+
+  .about-description {
+    font-size: 20px;
+    line-height: 32px;
+  }
+}
