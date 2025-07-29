@@ -5,7 +5,7 @@ This is my personal portfolio website showcasing my experience, projects, and pr
 ## Structure
 
 - `work.html` → Home page  
-- `about-me.html` → About Me page  
+- `aboutgenny.html` → About Me page  
 - `resume.html` → Coming soon  
 - `contact.html` → Coming soon  
 - `assets/` → Images and other media files  

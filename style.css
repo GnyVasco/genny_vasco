@@ -51,14 +51,22 @@ body {
   align-items: center;
   padding: 4px 8px;
   font-size: 16px;
+  font-weight: 400; /* ensure default is normal weight */
   letter-spacing: 0.04em;
   color: rgba(0, 0, 0, 0.64);
   text-decoration: none;
+  transition: color 0.3s ease, font-weight 0.3s ease; /* smooth hover transition */
 }
 
 .nav-item.active {
   font-weight: 700;
   color: #000000;
+}
+
+.nav-item:hover {
+  font-weight: 700;
+  color: #A90FB7;
+  cursor: pointer;
 }
 
 /* Section 1: Hero */
@@ -507,45 +515,11 @@ body {
   display: block;
 }
 
-/*Elevator Pitch*/
-.pitch-section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 0 120px 16px;
-  gap: 48px;
-  max-width: 1360px;
-  margin: 0 auto;
-}
-
-.pitch-text {
-  display: flex;
-  flex-direction: column;
-  gap: 32px;
-}
-
-.pitch-highlight {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 160%;
-  color: rgba(0, 0, 0, 0.88);
-}
-
-.pitch-description {
-  font-family: 'Manrope', sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 160%;
-  color: rgba(0, 0, 0, 0.68);
-}
-
 /*Process*/
 .process-section {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   padding: 0;
   gap: 40px;
@@ -587,7 +561,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 40px;
+  gap: 16px;
   max-width: 630px;
 }
 
@@ -606,6 +580,69 @@ body {
   line-height: 160%;
   color: rgba(0, 0, 0, 0.68);
 }
+
+.process-description ul {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 160%;
+    color: rgba(0, 0, 0, 0.68);
+    padding-left: 20px; /* standard indentation for lists */
+}
+
+/*Elevator Pitch*/
+.pitch-section {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 120px 0;
+  gap: 48px;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.pitch-text {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  flex: 1 1 50%; /* usually left column */
+}
+
+.pitch-highlight {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.88);
+}
+
+.pitch-description {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 160%;
+  color: rgba(0, 0, 0, 0.68);
+}
+
+.pitch-video {
+  flex: 1 1 40%; /* slightly less than half to keep video reasonable */
+  position: relative;
+  /*padding-top: 75%; /* maintains 4:3 aspect ratio */
+  max-width: 480px; /* limit how wide the video gets */
+  max-height: 360px;       /* video won't get taller than 360px */
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.pitch-video iframe {
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
+  border: none;
+}
+
 
 .testimonials-section {
   display: flex;
@@ -769,6 +806,10 @@ body {
     font-size: 28px;
   }
 
+  .about-text .highlight {
+    font-size: 28px;
+  }
+
   .process-section {
     flex-direction: column;
     gap: 24px;
@@ -781,6 +822,14 @@ body {
   .process-description {
     width: 100%;
     max-width: 100%;
+  }
+
+  .pitch-section {
+    flex-direction: column;
+  }
+
+  .pitch-text, .pitch-video {
+    flex: 1 1 100%;
   }
 
   .testimonials-carousel {
