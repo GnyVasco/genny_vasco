@@ -211,7 +211,7 @@ body {
 .project-list {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 3 columns */
-  gap: 64px; /* space between items */
+  gap: 32px; /* space between items */
   width: 100%;
 }
 
@@ -221,7 +221,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  gap: 16px;
   width: 460px;
   max-width: 100%;
 }
@@ -246,7 +246,7 @@ body {
 .project-tags {
   display: flex;
   flex-direction: row;
-  gap: 12px;
+  gap: 8px;
 }
 
 /* Tag Styles */
@@ -255,7 +255,7 @@ body {
   display: flex;
   align-items: center;
   padding: 4px 16px;
-  gap: 20px;
+  gap: 12px;
   border-radius: 12px;
   font-family: 'DM Sans', sans-serif;
   font-size: 14px;
@@ -282,8 +282,10 @@ body {
   flex-direction: column;
   align-items: flex-start;
   /*padding: 0 16px;*/
-  gap: 12px;
+  gap: 8px;
   width: 100%;
+  height: auto;
+  margin-bottom: 0;
 }
 
 /* Title Inside Card */
@@ -306,7 +308,7 @@ body {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 16px;
-  line-height: 32px;
+  line-height: 24px;
   color: rgba(0, 0, 0, 0.58);
 }
 
